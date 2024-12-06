@@ -2,6 +2,9 @@ package com.adventofcode2024.dec04;
 
 import java.util.Arrays;
 
+import com.adventofcode2024.common.Direction;
+import com.adventofcode2024.common.Point;
+
 class WordSearch {
 
     private final char[][] board;

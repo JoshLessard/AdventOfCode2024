@@ -1,8 +1,8 @@
-package com.adventofcode2024.dec04;
+package com.adventofcode2024.common;
 
-record Point( int x, int y ) {
+public record Point(int x, int y ) {
 
-    Point nextPoint( Direction direction ) {
+    public Point nextPoint( Direction direction ) {
         return switch ( direction ) {
             case UP -> new Point( x, y - 1 );
             case UP_RIGHT -> new Point( x + 1, y - 1 );
