@@ -14,4 +14,12 @@ public record Point(int x, int y ) {
             case UP_LEFT -> new Point( x - 1, y - 1 );
         };
     }
+
+    public Slope slopeTo( Point other ) {
+        return new Slope( other.x() - this.x(), other.y() - this.y() );
+    }
+
+    public Point shift( Slope slope ) {
+        return new Point( x + slope.deltaX(), y + slope.deltaY() );
+    }
 }
