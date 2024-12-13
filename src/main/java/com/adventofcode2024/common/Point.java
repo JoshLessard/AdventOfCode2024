@@ -1,6 +1,6 @@
 package com.adventofcode2024.common;
 
-public record Point(int x, int y ) {
+public record Point( int x, int y ) {
 
     public Point nextPoint( Direction direction ) {
         return switch ( direction ) {
