@@ -10,6 +10,19 @@ public enum Direction {
     LEFT,
     UP_LEFT;
 
+    public Direction turnLeft() {
+        return switch ( this ) {
+            case UP -> UP_LEFT;
+            case UP_RIGHT -> UP;
+            case RIGHT -> UP_RIGHT;
+            case DOWN_RIGHT -> RIGHT;
+            case DOWN -> DOWN_RIGHT;
+            case DOWN_LEFT -> DOWN;
+            case LEFT -> DOWN_LEFT;
+            case UP_LEFT -> LEFT;
+        };
+    }
+
     public Direction turnRight() {
         return switch ( this ) {
             case UP -> UP_RIGHT;
