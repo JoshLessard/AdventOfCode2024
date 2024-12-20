@@ -22,4 +22,8 @@ public record Point( int x, int y ) {
     public Point shift( Slope slope ) {
         return new Point( x + slope.deltaX(), y + slope.deltaY() );
     }
+
+    public int manhattanDistanceTo( Point that ) {
+        return Math.abs( that.x - this.x ) + Math.abs( that.y - this.y );
+    }
 }
